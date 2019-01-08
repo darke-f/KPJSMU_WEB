@@ -104,7 +104,7 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    @if(count($admin) >0)
+                    {{--@if(count($admin) >0)
                         @foreach($admin as $adm)
                           <tr>
                             <td>{{$adm->id}}</td>
@@ -112,7 +112,7 @@
                             <td>{{$adm->email}}</td>
                           </tr>
                         @endforeach
-                    @endif
+                    @endif--}}
                   </tbody>
                 </table>
               </div>

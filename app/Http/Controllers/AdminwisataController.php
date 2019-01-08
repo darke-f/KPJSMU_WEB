@@ -15,7 +15,7 @@ class AdminwisataController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     
@@ -26,12 +26,13 @@ class AdminwisataController extends Controller
      */
     public function index()
     {
-        if (auth()->user()->bool !== 1) {
+        /*if (auth()->user()->bool !== 1) {
             return redirect('\about')->with('error','Unauthorized Page');
         }
         
         $wisatas = Wisata::all();
-        return view('admin.datawisata')->with('wisatas',$wisatas);
+        return view('admin.datawisata')->with('wisatas',$wisatas);*/
+        return view('admin.datawisata');
     }
 
     /**
