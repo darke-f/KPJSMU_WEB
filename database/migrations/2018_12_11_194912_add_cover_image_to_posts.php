@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMastercustomerTable extends Migration
+class AddCoverImageToPosts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CreateMastercustomerTable extends Migration
      */
     public function up()
     {
-        Schema::create('mastercustomer', function (Blueprint $table) {
-            $table->string('kodeCustomer')->unique();
-            $table->string('namaCustomer');
-            $table->string('alamatCustomer');
-            $table->string('keteranganCostumer');
+        Schema::table('posts',function($table){
+            $table->string('cover_image');
         });
     }
 
@@ -28,6 +25,8 @@ class CreateMastercustomerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mastercustomer');
+        Schema::table('posts',function($table){
+            $table->dropColumn('cover_image');
+        });
     }
 }
