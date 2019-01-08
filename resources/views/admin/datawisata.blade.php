@@ -38,7 +38,7 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    @if(count($wisatas) >0)
+                    {{--@if(count($wisatas) >0)
                         @foreach($wisatas as $wisata)
                           <tr>
                             <td>{{$wisata->title}}</td>
@@ -50,7 +50,7 @@
                             {!!Form::close()!!}</div></td>
                           </tr>
                         @endforeach
-                    @endif
+                    @endif--}}
                   </tbody>
                 </table>
               </div>
