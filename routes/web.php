@@ -43,7 +43,8 @@ Auth::routes();
 Route::resources([
     'adminwisatas' => 'AdminwisataController',
     'adminevents' => 'AdmineventController',
-    'adminreviews' => 'AdminreviewController'
+    'adminreviews' => 'AdminreviewController',
+    'stockbarangs' => 'StockController'
 ]); 
 
 Route::get('/dashboard', 'DashboardController@index');
