@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMasterbarangTable extends Migration
+class CreateTableReview extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateMasterbarangTable extends Migration
      */
     public function up()
     {
-        Schema::create('masterbarang', function (Blueprint $table) {
-            $table->string('kodeBarang')->unique();
-            $table->string('namaBarang');
-            $table->string('satuanBarang');
-            $table->string('noteBarang');
+        Schema::create('review', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->string('name');
+            $table->mediumText('detail');
+            $table->timestamps();
         });
     }
 
@@ -28,6 +29,6 @@ class CreateMasterbarangTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('masterbarang');
+        Schema::dropIfExists('review');
     }
 }
